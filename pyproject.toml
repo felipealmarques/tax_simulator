@@ -1,0 +1,23 @@
+[project]
+name = "tax-simulator"
+version = "0.1.0"
+description = "Utiliza taxas de alíquotas interestaduais e para calcular a efetividade de construir uma filial de e-commerce em Extrema/MG"
+authors = [
+    {name = "felipealmarques",email = "felipealmarques02@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas (>=2.2,<3.0)",
+    "streamlit (>=1.54.0,<2.0.0)",
+    "requests (>=2.32.5,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [
+    { include = "tax_simulator", from = "src"}
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
