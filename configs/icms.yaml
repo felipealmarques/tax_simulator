@@ -1,0 +1,131 @@
+metadata:
+  fonte: "Tabela ICMS - Felipe"
+  versao: "1.0"
+  vigencia_inicio: "2025-01-01"
+  observacao: "Protótipo - matriz simplificada conforme tabela original"
+
+icms:
+  interna:
+    AC: 17
+    AL: 17
+    AM: 18
+    AP: 18
+    BA: 18
+    CE: 17
+    DF: 18
+    ES: 17
+    GO: 17
+    MA: 18
+    MT: 17
+    MS: 17
+    MG: 18
+    PA: 17
+    PB: 18
+    PR: 18
+    PE: 18
+    PI: 17
+    RN: 18
+    RS: 18
+    RJ: 20
+    RO: 17
+    RR: 17
+    SC: 17
+    SP: 18
+    SE: 18
+    TO: 18
+
+  interestadual:
+    padrao:
+      sul_sudeste_para_sul_sudeste: 12
+      sul_sudeste_para_norte_nordeste_centro_oeste: 7
+      norte_nordeste_centro_oeste_para_sul_sudeste: 12
+      norte_nordeste_centro_oeste_para_norte_nordeste_centro_oeste: 12
+
+    excecoes_matriz_completa:
+      AC:
+        AL: 12
+        AM: 12
+        AP: 12
+        BA: 12
+        CE: 12
+        DF: 12
+        ES: 12
+        GO: 12
+        MA: 12
+        MT: 12
+        MS: 12
+        MG: 12
+        PA: 12
+        PB: 12
+        PR: 12
+        PE: 12
+        PI: 12
+        RN: 12
+        RS: 12
+        RJ: 12
+        RO: 12
+        RR: 12
+        SC: 12
+        SP: 12
+        SE: 12
+        TO: 12
+
+      MG:
+        AC: 7
+        AL: 7
+        AM: 7
+        AP: 7
+        BA: 7
+        CE: 7
+        DF: 7
+        ES: 7
+        GO: 7
+        MA: 7
+        MT: 7
+        MS: 7
+        PA: 7
+        PB: 7
+        PR: 12
+        PE: 7
+        PI: 7
+        RN: 7
+        RS: 12
+        RJ: 12
+        RO: 7
+        RR: 7
+        SC: 12
+        SP: 12
+        SE: 7
+        TO: 7
+
+      SP:
+        AC: 7
+        AL: 7
+        AM: 7
+        AP: 7
+        BA: 7
+        CE: 7
+        DF: 7
+        ES: 7
+        GO: 7
+        MA: 7
+        MT: 7
+        MS: 7
+        MG: 12
+        PA: 7
+        PB: 7
+        PR: 12
+        PE: 7
+        PI: 7
+        RN: 7
+        RS: 12
+        RJ: 12
+        RO: 7
+        RR: 7
+        SC: 12
+        SE: 7
+        TO: 7
+
+  importado:
+    aliquota_interestadual: 4
+    base_legal: "Resolução Senado 13/2012"
