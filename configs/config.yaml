@@ -1,2 +1,6 @@
-default:
-  - icms
+defaults:
+  - icms: icms_padrao
+  - _self_
+
+app:
+  name: tax_simulator

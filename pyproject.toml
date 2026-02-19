@@ -17,8 +17,12 @@ dependencies = [
 
 [tool.poetry]
 packages = [
-    { include = "tax_simulator", from = "src"}
+    { include = "tax_simulator", from = "src" }
 ]
+
+[project.scripts]
+tax-simulator = "tax_simulator.main:main"
+
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
