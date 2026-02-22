@@ -1,3 +1,6 @@
 page:
   title: "Simulador Tributário"
   layout: "wide"
+
+sidebar:
+  header: "Parâmetros"

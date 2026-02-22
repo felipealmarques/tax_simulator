@@ -10,3 +10,6 @@ run:
 
 main:
     poetry run python -m app.main
+
+app:
+    poetry run streamlit run app/main.py
