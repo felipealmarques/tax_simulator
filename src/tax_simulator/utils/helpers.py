@@ -32,7 +32,7 @@ def print_results(
     Valor total: R${round(scenario_comparation.tts_scenario.total_value, 2):,}
 
     -------- Economia Geral --------
-        R${round(scenario_comparation.total_savings, 2)}
+        R${round(scenario_comparation.total_savings, 2):,}
     """.replace(".","^").replace(",",".").replace("^",",")
 
     print(result)

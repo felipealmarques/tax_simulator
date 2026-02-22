@@ -7,3 +7,6 @@ install:
 # roda engine principal
 run:
     poetry run python -m main
+
+main:
+    poetry run python -m app.main

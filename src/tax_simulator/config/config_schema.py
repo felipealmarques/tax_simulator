@@ -12,7 +12,11 @@ class IcmsTax:
     metadata: Dict[str, Any] = field(default_factory=dict)
     icms: Icms = field(default_factory=Icms)
 
+@dataclass
+class Dashboard:
+    page: Dict[str, Any] = field(default_factory=dict)
 
 @dataclass
 class TaxSimulatorCfg:
     icms: IcmsTax = field(default_factory=IcmsTax)
+    dashboard: Dashboard = field(default_factory=Dashboard)

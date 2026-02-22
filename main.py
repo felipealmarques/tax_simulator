@@ -21,7 +21,7 @@ def main(cfg: TaxSimulatorCfg):
     # configurações
     uf_origin = "SP"
     uf_destiny = "BA"
-    monthly_amount = 10_000
+    monthly_amount = 500_000
     months = 12
 
     origin_operation = Operation(
