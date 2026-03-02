@@ -1,19 +1,15 @@
-import hydra
+from omegaconf import DictConfig
 from datetime import date
 
 from tax_simulator.domain.models import Operation, OriginMerchandise
 from tax_simulator.domain.engines import ICMSPolicyEngine
 from tax_simulator.data_ingestion.repositories import ICMSRepository
 
-from tax_simulator.config.config_schema import TaxSimulatorCfg
-from tax_simulator.config.config_store import register
+from tax_simulator.config.config_loader import load_config
 from tax_simulator.utils.helpers import print_results
 
-register()
-
 # Função principal
-@hydra.main(version_base=None, config_path="configs", config_name="config")
-def main(cfg: TaxSimulatorCfg):
+def main(cfg: DictConfig):
 
     repo = ICMSRepository(cfg)
     engine = ICMSPolicyEngine(repo)
@@ -59,4 +55,5 @@ def main(cfg: TaxSimulatorCfg):
 
 
 if __name__ == "__main__":
-    main()
+    cfg = load_config()
+    main(cfg=cfg)

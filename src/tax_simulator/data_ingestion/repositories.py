@@ -1,7 +1,7 @@
-from tax_simulator.config.config_schema import TaxSimulatorCfg
+from omegaconf import DictConfig
 
 class ICMSRepository:
-    def __init__(self, cfg: TaxSimulatorCfg):
+    def __init__(self, cfg: DictConfig):
         self.cfg = cfg
 
     def get_aliquota_interna(self, uf: str) -> float:
