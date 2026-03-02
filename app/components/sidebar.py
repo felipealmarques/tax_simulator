@@ -9,14 +9,14 @@ def render_sidebar(cfg: DictConfig) -> SimulationSettings | None:
 
     st.sidebar.header(cfg.dashboard.sidebar.header)
 
-    states = cfg.icms.icms.interna.keys()
+    states = list(cfg.icms.icms.interna.keys())
 
-    uf_origin = st.sidebar.selectbox("Origem", states)
-    uf_destiny = st.sidebar.selectbox("Destino", states)
-    monthly_amount = st.sidebar.number_input("Valor mensal", min_value=0)
+    uf_origin = st.sidebar.selectbox("Origem", states, index=states.index("SP"))
+    uf_destiny = st.sidebar.selectbox("Destino", states, index=states.index("RJ"))
+    monthly_amount = st.sidebar.number_input("Valor mensal", min_value=0, value=5_000)
     months = st.sidebar.slider("Meses", 1, 60, 12)
 
-    if st.sidebar.button("Simular"):
+    if st.sidebar.button("Simular", key="btn_simular", type="primary"):
         
         return SimulationSettings(
             uf_origin=uf_origin,

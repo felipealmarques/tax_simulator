@@ -45,18 +45,24 @@ def run_simulation(
         months=months
     )
 
-    monthly_amount=monthly_amount
+    total_income = monthly_amount * months
     normal_total = scenario_comparation.normal_scenario.total_value
     tts_total = scenario_comparation.tts_scenario.total_value
     total_savings = scenario_comparation.total_savings
     percentual_savings = (total_savings / normal_total) * 100
 
+    metadata = {
+        "settings": settings,
+        "scenario_comparation": scenario_comparation,
+    }
+
     return {
-        "monthly_amount": monthly_amount,
+        "total_income": total_income,
         "normal_total": normal_total,
         "tts_total": tts_total,
         "total_savings": total_savings,
         "percentual_savings": percentual_savings,
+        "metadata": metadata,
     }
 
     

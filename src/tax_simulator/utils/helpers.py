@@ -1,3 +1,6 @@
+import streamlit as st
+from pathlib import Path
+
 from tax_simulator.domain.models import ScenarioComparation
 
 def print_results(
@@ -36,3 +39,14 @@ def print_results(
     """.replace(".","^").replace(",",".").replace("^",",")
 
     print(result)
+
+
+def format_currency(value: float) -> str:
+    return f"R$ {value:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
+
+def load_css():
+    style_path = Path(__file__).parents[3] / "app" / "assets" / "styles.css"
+    print(style_path)
+    with open(style_path) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)

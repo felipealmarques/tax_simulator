@@ -1,0 +1,272 @@
+/* =======================
+   DESIGN TOKENS
+======================= */
+
+:root {
+    --primary: #2563eb;
+    --primary-soft: #eff6ff;
+
+    --success: #16a34a;
+    --success-soft: #ecfdf5;
+
+    --danger: #dc2626;
+
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-hover: #f1f5f9;
+
+    --border: #e2e8f0;
+    --hover: #adb1b7;
+
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+}
+
+/* =======================
+   APP BACKGROUND
+======================= */
+
+[data-testid="stAppViewContainer"] {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+}
+
+/* =======================
+   METRIC CARDS
+======================= */
+
+[data-testid="stMetric"] {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    transition: all 0.2s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 26px;
+}
+
+[data-testid="stMetricDelta"] {
+    font-weight: 600;
+}
+
+/* =======================
+   SIDEBAR
+======================= */
+
+[data-testid="stSidebar"] {
+    background-color: #ffffff;
+    color: var(--text-primary);
+    border-right: 1px solid var(--border);
+}
+
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span {
+    color: var(--text-secondary);
+}
+
+/* Inputs Sidebar */
+
+[data-testid="stSidebar"] .stSelectbox div,
+[data-testid="stSidebar"] .stNumberInput input {
+    background-color: #ffffff;
+    color: var(--text-primary);
+}
+
+
+
+/* =======================
+   BUTTONS
+======================= */
+
+/* Estado normal */
+section[data-testid="stSidebar"] 
+button[kind="primary"] {
+    background-color: var(--text-primary) !important;   /* azul */
+    border-color: var(--text-primary) !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover */
+section[data-testid="stSidebar"] 
+button[kind="primary"]:hover {
+    background-color: var(--hover) !important;   /* vermelho */
+    border-color: var(--hover) !important;
+}
+
+/* Texto */
+section[data-testid="stSidebar"] 
+button[kind="primary"] p,
+section[data-testid="stSidebar"] 
+button[kind="primary"] span {
+    color: white !important;
+}
+
+/* =======================
+   COMPARISON SECTION
+======================= */
+
+.comparison-wrapper {
+    padding: 28px;
+    border-radius: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+/* Headers mais sofisticados (sem gradiente exagerado) */
+
+.card-header-blue {
+    background-color: var(--primary-soft);
+    color: var(--primary);
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.card-header-green {
+    background-color: var(--success-soft);
+    color: var(--success);
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Rows internas */
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.row:last-child {
+    border-bottom: none;
+}
+
+.value-strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.value-green {
+    font-weight: 600;
+    color: var(--success);
+}
+
+/* =======================
+   TAX DETAIL SECTION
+======================= */
+
+.tax-detail-wrapper {
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 24px;
+    margin-top: 28px;
+}
+
+.tax-detail-title {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text-primary);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.tax-detail-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+    margin-left: 14px;
+}
+
+/* Mini tabela */
+
+.tax-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.tax-row {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.tax-row:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+}
+
+.tax-scenario {
+    width: 180px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.tax-col {
+    flex: 1;
+    padding: 0 16px;
+}
+
+.tax-col:not(:last-child) {
+    border-right: 1px solid var(--border);
+}
+
+.tax-header {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tax-value {
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.tax-value strong {
+    font-weight: 700;
+}
+
